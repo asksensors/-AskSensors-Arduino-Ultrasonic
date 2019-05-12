@@ -22,6 +22,7 @@ SoftwareSerial AT(RX,TX);
 String ssid     = "............."; //Wifi SSID
 String password = "............."; //Wifi Password
 String apiKeyIn = "............."; // API Key
+const unsigned int writeInterval = 25000; // write interval (in ms)
 
 // ASKSENSORS API host config
 String host = "api.asksensors.com";  // API host name
@@ -85,7 +86,7 @@ void loop() {
   Serial.println("********** Close TCP Connection ");
   Serial.println("*****************************************************");
   
-  delay(20000);   // delay
+  delay(writeInterval);   // delay
   }
 
 
