@@ -23,7 +23,8 @@ String ssid     = "............."; //Wifi SSID
 String password = "............."; //Wifi Password
 String apiKeyIn = "............."; // API Key
 
-String host = "asksensors.com";  // host
+// ASKSENSORS API host config
+String host = "api.asksensors.com";  // API host name
 String port = "80";      // port
 
 int AT_cmd_time; 
@@ -64,7 +65,7 @@ void loop() {
   Serial.println(" cm");
 
  // Create the URL for the request
-  String url = "GET /api.asksensors/write/";
+  String url = "GET /write/";
   url += apiKeyIn;
   url += "?module1=";
   url += distance;
